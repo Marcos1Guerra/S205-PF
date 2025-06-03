@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrícula - Inatel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <style>
+    html {
+      overflow-y: auto;
+    }
+  </style>
+
+  <body style="place-items: normal">
+    <div class="matricula-container">
+      <div class="barra-superior">
+        <h1>Formulário de Matrícula</h1>
+      </div>
+
+      <form id="form-matricula">
+        <fieldset>
+          <legend>Tipo de Solicitação</legend>
+          <select name="tipo" id="tipo" required>
+            <option value="">Selecione</option>
+            <option value="matricula">Matrícula</option>
+            <option value="rematricula">Rematrícula</option>
+          </select>
+        </fieldset>
+
+        <!-- Dados Pessoais -->
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+          <div class="input-info">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="input-info">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="input-info">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" maxlength="14" required />
+          </div>
+          <div class="input-info">
+            <label for="rg">RG:</label>
+            <input type="text" id="rg" name="rg" required />
+          </div>
+          <div class="input-info">
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input
+              type="date"
+              id="data-nascimento"
+              name="data-nascimento"
+              required
+            />
+          </div>
+          <div class="input-info">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required />
+          </div>
+          <div class="input-info">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required />
+          </div>
+          <div class="input-info">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required />
+          </div>
+          <div class="input-info">
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+              <option value="">Selecione</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="SP">São Paulo</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="ES">Espírito Santo</option>
+              <!-- adicionar mais estados se quiser -->
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Curso / Período -->
+        <fieldset>
+          <legend>Curso e Período</legend>
+          <div class="input-info">
+            <label for="curso">Curso:</label>
+            <select id="curso" name="curso" required>
+              <option value="">Selecione</option>
+              <option value="opcao1">GEB - Engenharia Biomédica</option>
+              <option value="opcao2">GEC - Engenharia de Computação</option>
+              <option value="opcao3">
+                GEA - Engenharia de Controle e Automação
+              </option>
+              <option value="opcao2">GEP - Engenharia de Produção</option>
+              <option value="opcao3">GES - Engenharia de Software</option>
+              <option value="opcao2">
+                GET - Engenharia de Telecomunicações
+              </option>
+              <option value="opcao3">GEL - Engenharia de Elétrica</option>
+            </select>
+          </div>
+
+          <div class="input-info">
+            <label for="periodo">Período:</label>
+            <input
+              type="number"
+              id="periodo"
+              name="periodo"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
+
+          <div class="input-info">
+            <label for="turno">Turno:</label>
+            <select id="turno" name="turno" required>
+              <option value="">Selecione</option>
+              <option value="diurno">Diurno</option>
+              <option value="noturno">Noturno</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Materias -->
+        <fieldset>
+          <legend>Selecione as Matérias</legend>
+          <div
+            class="input-info"
+            style="display: grid; justify-content: normal"
+          >
+            <div
+              id="lista-materias"
+              style="max-height: 200px; overflow-y: auto"
+            >
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="A02 - Controle de Sistemas Dinâmicos"
+                />
+                A02
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="C02 - Algoritmos e Estrutura de Dados I"
+                />
+                C02
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="C03 - Algoritmos e Estrutura de Dados II"
+                />
+                C03
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="C06 - Programação Orientada a Objeto e Java"
+                />
+                C06
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="C10 - Inteligência Artificial"
+                />
+                C10
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="C11 - Ciência de Dados e Python"
+                />
+                C11
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E01 - Circuitos Elétricos em Corrente Contínua"
+                />
+                E01
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E02 - Circuitos Elétricos em Corrente Alternada"
+                />
+                E02
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E03 - Circuitos Elétricos com Aplicação em Filtros"
+                />
+                E03
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E04 - Eletrônica Analógica para Projetos de Fontes de Alimentação"
+                />
+                E04
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E05 - Eletrônica Analógica Transistorizada"
+                />
+                E05
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E06 - Eletrônica Analógica com Aplicações em Amplificador Operacional"
+                />
+                E06
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E07 - Eletrônica Digital Básica"
+                />
+                E07
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E08 - Eletrônica Digital Aplicada a Contadores e Sequenciadores"
+                />
+                E08
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E09 - Sistemas Microcontrolados e Microprocessados"
+                />
+                E09
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="E11 - Processamento Digital de Sinais"
+                />
+                E11
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="F01 - Física Newtoniana Clássica"
+                />
+                F01
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="F02 - Física Ondulatória, Óptica e Termodinâmica"
+                />
+                F02
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="F03 - Física Aplicada na Eletricidade e Eletromagnetismo"
+                />
+                F03
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="F04 - Física Moderna e Quântica"
+                />
+                F04
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="F06 - Eletromagnetismo"
+                />
+                F06
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="G04 - Gestão de Projetos I"
+                />
+                G04
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="H01 - Administração"
+                />
+                H01
+              </div>
+              <div>
+                <input type="checkbox" name="materias" value="H02 - Economia" />
+                H02
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="H03 - Humanidades, Ciências Sociais e Cidadania"
+                />
+                H03
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="materias"
+                  value="H04 - Ciências do Ambiente"
+                />
+                H04
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Botão final -->
+        <div class="form-actions">
+          <button type="submit">Solicitar</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("form-matricula")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Solicitação enviada com sucesso!");
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

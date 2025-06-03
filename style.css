@@ -1,13 +1,14 @@
 body {
-  margin: 0;
+  max-width: 768px;
+  margin: 0 auto;
   padding: 0;
-  height: 100%;
   overflow-x: hidden;
+  place-items: center;
 }
 
 .container {
   max-width: 350px;
-  height: 100dvh;
+  height: var(--altura-real);
   align-content: center;
   background: #f8f9fd;
   background: linear-gradient(
@@ -22,7 +23,7 @@ body {
 }
 
 .svg-logo svg {
-  fill: #065cbe;
+  fill: #0066c0;
   width: 200px;
 }
 
@@ -34,7 +35,7 @@ body {
 p {
   text-align: center;
   font-weight: 900;
-  color: #065cbe;
+  color: #0066c0;
 }
 
 .form {
@@ -62,7 +63,7 @@ p {
 
 .form .input:focus {
   outline: none;
-  border-inline: 2px solid #12b1d1;
+  border-inline: 2px solid #0066c0;
 }
 
 .form .forgot-password {
@@ -73,7 +74,7 @@ p {
 
 .form .forgot-password a {
   font-size: 16px;
-  color: #0099ff;
+  color: #0066c0;
   text-decoration: none;
 }
 
@@ -81,12 +82,12 @@ p {
   display: block;
   width: 100%;
   font-weight: bold;
-  background: linear-gradient(45deg, #065cbe 0%, rgb(18, 177, 209) 100%);
+  background: linear-gradient(45deg, #0066c0 0%, rgb(18, 177, 209) 100%);
   color: white;
   padding-block: 15px;
   margin: 20px auto;
   border-radius: 20px;
-  box-shadow: #065cbe 0px 20px 10px -15px;
+  box-shadow: #0066c0 0px 20px 10px -15px;
   border: none;
   text-align: center;
   text-decoration: none;
@@ -107,7 +108,7 @@ p {
 
 .agreement a {
   text-decoration: none;
-  color: #0099ff;
+  color: #0066c0;
   font-size: 16px;
 }
 
@@ -116,13 +117,14 @@ p {
   max-width: 768px;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
-  height: 100dvh;
+  height: var(--altura-real);
 }
 
 .btn-menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .menu-icon {
@@ -131,6 +133,24 @@ p {
   font-size: 2rem;
   cursor: pointer;
   z-index: 101;
+  transition: 0.3s;
+}
+
+.menu-icon p {
+  font-size: 10px;
+  color: #959595;
+  line-height: 0;
+}
+
+.menu-icon.active svg,
+.menu-icon:hover svg {
+  fill: #0066c0;
+  stroke: #0066c0;
+}
+
+.menu-icon.active p,
+.menu-icon:hover p {
+  color: #0066c0;
 }
 
 .menu {
@@ -141,10 +161,9 @@ p {
   transform: translateX(-50%);
   width: 100%;
   max-width: 768px;
-  height: 100dvh;
+  height: var(--altura-real);
   background-color: white;
   z-index: 100;
-  padding: 2rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
 }
@@ -154,10 +173,128 @@ p {
 }
 
 .conteudo {
-  height: 100dvh;
-  max-height: 100%;
+  height: var(--altura-real);
 }
 
 .conteudo svg {
-  width: 200px;
+  width: fit-content;
+}
+
+.barra-superior {
+  background-color: #0066c0;
+  padding: 15px;
+}
+
+.barra-superior h1 {
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.box-pesquisa {
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #c6c6c8;
+}
+
+.box-pesquisa .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.box-pesquisa input {
+  width: -webkit-fill-available;
+  border: none;
+  background-color: #eeeeef;
+  padding-left: 35px;
+  border-radius: 10px;
+  line-height: 3;
+}
+
+.avisos-body {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.avisos {
+  display: grid;
+  width: 100%;
+}
+
+.avisos p,
+.avisos h2 {
+  font-size: 14px;
+  margin: 5px;
+  color: #000;
+  text-align: left;
+}
+
+.avisos .sub-p {
+  color: #ececec;
+  text-align: left;
+  line-height: 2;
+}
+
+.aluno {
+  display: flex;
+  padding: 0 10px;
+}
+
+.conteudo2 {
+  display: none;
+  height: var(--altura-real);
+}
+
+.conteudo2 p {
+  border-bottom: 1px solid #959595ad;
+  text-align: left;
+  color: #959595;
+  line-height: 2;
+  padding: 0 10px;
+}
+
+.perfil {
+  display: grid;
+  justify-items: center;
+}
+
+.perfil p {
+  color: #0066c0;
+  line-height: 0;
+  padding-right: 10px;
+  border-bottom: none;
+}
+
+.matricula-btn {
+  text-align: left;
+  text-decoration: none;
+}
+
+.matricula-btn p,
+.matricula-btn h2 {
+  font-size: 16px;
+  padding: 0 10px;
+  border-bottom: none;
+  line-height: 0.5;
+  font-weight: 400;
+}
+
+.matricula-btn h2 {
+  color: #000;
+}
+
+.matricula-container fieldset {
+  margin: 15px 10px;
+}
+
+.input-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
 }
