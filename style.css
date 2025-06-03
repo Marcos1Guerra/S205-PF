@@ -122,7 +122,8 @@ p {
   position: absolute;
   bottom: 0;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 5%;
 }
 
 .menu-icon {
