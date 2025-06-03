@@ -296,5 +296,92 @@ p {
 .input-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
+}
+
+.input-style {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555;
+  outline: none;
+}
+
+.input-style:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-info option {
+  font-size: 14px;
+}
+
+.btn-solicitar {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #0066c0;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #0066c0;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.btn-solicitar:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #0066c0;
+  z-index: -1;
+}
+
+.btn-solicitar:hover,
+.btn-solicitar:focus,
+.btn-solicitar:active {
+  color: white;
+  border: 3px solid #0066c0;
+}
+
+.btn-solicitar:hover:before,
+.btn-solicitar:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.btn-solicitar:active {
+  transform: scale(0.9);
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.voltar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 999999;
+  padding: 10px;
+}
+
+.voltar p {
+  color: #fff;
 }
