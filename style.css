@@ -122,9 +122,10 @@ p {
 
 .btn-menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 100%;
 }
 
 .menu-icon {
