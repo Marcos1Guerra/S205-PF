@@ -8,7 +8,7 @@ body {
 
 .container {
   max-width: 350px;
-  height: var(--altura-real);
+  height: 100svh;
   align-content: center;
   background: #f8f9fd;
   background: linear-gradient(
