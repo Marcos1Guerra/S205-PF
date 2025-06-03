@@ -53,11 +53,7 @@ p {
   border-inline: 2px solid transparent;
 }
 
-.form .input::-moz-placeholder {
-  color: rgb(170, 170, 170);
-}
-
-.form .input::placeholder {
+.form .input::-webkit-input-placeholder {
   color: rgb(170, 170, 170);
 }
 
@@ -92,6 +88,7 @@ p {
   text-align: center;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  will-change: transform;
 }
 
 .login-button:hover,
