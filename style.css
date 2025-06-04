@@ -121,9 +121,10 @@ p {
   display: flex;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  justify-content: center;
-  gap: 5%;
+  left: 0;
+  right: 0;
+  justify-content: space-evenly;
+  padding: 20px;
 }
 
 .menu-icon {
