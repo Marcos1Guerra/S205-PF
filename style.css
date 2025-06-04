@@ -349,9 +349,7 @@ p {
   z-index: -1;
 }
 
-.btn-solicitar:hover,
-.btn-solicitar:focus,
-.btn-solicitar:active {
+.btn-solicitar:hover {
   color: white;
   border: 3px solid #0066c0;
 }
@@ -376,6 +374,7 @@ p {
   display: flex;
   align-items: center;
   position: absolute;
+  text-decoration: none;
   top: 0;
   z-index: 999999;
   padding: 10px;
