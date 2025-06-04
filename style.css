@@ -123,13 +123,13 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 0 15px 0 15px;
   justify-content: space-evenly;
 }
 
 .menu-icon {
   background: none;
   border: none;
-  font-size: 2rem;
   cursor: pointer;
   z-index: 101;
   transition: 0.3s;
